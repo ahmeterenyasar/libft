@@ -6,13 +6,13 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:10:21 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/10 16:10:23 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/14 12:13:10 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 
@@ -23,5 +23,3 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return (s1[i] - s2[i]);
 }
-
-//neden n-1 oldu çözemedim

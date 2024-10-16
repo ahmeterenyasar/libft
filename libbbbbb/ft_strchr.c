@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:06:11 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/10 16:06:29 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/14 12:08:05 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ char	*ft_strchr(const char *s, int c)
 	{
 		return ((char *)s);
 	}
-	return ((char*)NULL);
+	return ((char *) NULL);
 }

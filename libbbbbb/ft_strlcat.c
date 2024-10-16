@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:01:03 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/10 15:08:48 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/14 12:11:47 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	d_size = ft_strlen(dst);
 	s_size = ft_strlen(src);
 	if (dstsize <= d_size)
+	{
 		return (dstsize + s_size);
+	}
 	i = d_size;
 	j = 0;
 	while ((i + j) < (dstsize - 1) && src[j] != '\0')

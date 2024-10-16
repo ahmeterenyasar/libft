@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:25:00 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/10 15:08:54 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/14 12:12:15 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
+	{
 		return (srclen);
+	}
 	i = 0;
 	while (i < (dstsize - 1) && src[i] != '\0')
 	{
