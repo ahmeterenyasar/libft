@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:10:30 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 12:07:12 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/24 15:09:01 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
-	{
-		return (0);
-	}
-	while (*s != '\0')
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
+	write(fd, s, ft_strlen(s));
 }

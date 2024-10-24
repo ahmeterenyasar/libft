@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:01:03 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 12:11:47 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/24 14:19:50 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i + j] = '\0';
 	return (d_size + s_size);
 }
+
+// #include <stdio.h>
+// int main() {
+//     char dest[50] = "Hello, ";
+//     const char *src = "world!";
+//     size_t dest_size = sizeof(dest);
+//     size_t result = ft_strlcat(dest, src, dest_size);
+//     printf("Resulting string: %s\n", dest); 
+// Should print "Hello, world!"
+//     printf("Total length: %ld\n", result); 
+// Should print the total length of the string
+//     return 0;
+// }

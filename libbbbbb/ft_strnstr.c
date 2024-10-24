@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:06:22 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 14:25:29 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/24 14:19:28 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		c = 0;
 		while (hay[i + c] != '\0' && needle[c] != '\0'
-				&& hay[i + c] == needle[c] && i + c < len)
+			&& hay[i + c] == needle[c] && i + c < len)
 			c++;
 		if (c == n_len)
 			return (hay + i);
@@ -37,17 +37,16 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 
-#include <stdio.h>
-int main()
-{
-    const char haystack[] = "This is a simple haystack";
-    const char needle[] = "simple";
-    size_t len = 20;
-    char *result;
+// #include <stdio.h>
+// int main()
+// {
+//     const char haystack[] = "This is a simple haystack";
+//     const char needle[] = "simple";
+//     size_t len = 20;
+//     char *result;
 
-    // Test case 1: Found within length limit
-    result = ft_strnstr(haystack, needle, len);
-    printf("%s", result);
-    
-    return 0;
-}
+//     // Test case 1: Found within length limit
+//     result = ft_strnstr(haystack, needle, len);
+//     printf("%s", result);
+//     return 0;
+// }

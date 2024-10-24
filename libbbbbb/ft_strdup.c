@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:27:00 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/16 16:29:05 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/24 14:22:48 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,31 @@
 
 char	*ft_strdup(const char *s1)
 {
-	size_t	size;
 	char	*dest;
+	size_t	i;
 
-	size = ft_strlen(s1);
-	dest = (char *)malloc(size * sizeof(char) + 1);
-	if (dest == NULL)
+	dest = (char *) malloc(ft_strlen(s1) + 1);
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (s1[i])
 	{
-		return (0);
+		dest[i] = s1[i];
+		i++;
 	}
-	ft_memcpy(dest, s1, size);
-	dest[size] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
+
+// #include <stdio.h>
+// #include <stdlib.h>
+// int main(void)
+// {
+// 	const char *original = "Hello, 42 Istanbul!";
+// 	char *duplicate;
+// 	duplicate = ft_strdup(original);
+// 	printf("Original: %s\n", original);
+// 	printf("Duplicate: %s\n", duplicate);
+// 	free(duplicate);
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:23:16 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/16 18:13:31 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/21 15:40:25 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,3 +58,5 @@ char	**ft_split(char const *s, char c)
 	tab[tab_index] = NULL;
 	return (tab);
 }
+
+// DOUBLE free ekle

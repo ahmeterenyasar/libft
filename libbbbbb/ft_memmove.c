@@ -6,40 +6,44 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 10:30:49 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 12:16:27 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/24 14:21:03 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
-	char	*c_src;
-	char	*c_dst;
-	size_t	i;
+	size_t	len;
 
-	if (!dst && !src)
-	{
+	if (!s1 && !s2)
 		return (NULL);
-	}
-	c_src = (char *) src;
-	c_dst = (char *) dst;
-	i = 0;
-	if (c_dst > c_src)
+	len = 0;
+	if (s2 < s1)
 	{
+		len = n;
 		while (len > 0)
 		{
-			c_dst[len] = c_src[len];
 			len--;
+			((unsigned char *)s1)[len] = ((unsigned char *)s2)[len];
 		}
 	}
 	else
 	{
-		while (i < len)
+		len = 0;
+		while (len < n)
 		{
-			c_dst[i] = c_src[i];
-			i++;
+			((unsigned char *)s1)[len] = ((unsigned char *)s2)[len];
+			len++;
 		}
 	}
-	return (dst);
+	return (s1);
 }
+
+// int main()
+// {
+// 	char dest[] = "beret";
+// 	char src[] = "ahm";
+// 	char *res = ft_memmove(dest,src,3);
+// 	printf("%s",res);
+// }

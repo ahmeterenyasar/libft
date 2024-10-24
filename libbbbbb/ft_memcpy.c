@@ -6,20 +6,42 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 15:05:03 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 12:00:39 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/24 14:44:13 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	if (!dst || !src)
+	i = 0;
+	if (!dest && !src)
 		return (NULL);
-	i = -1;
-	while (++i < n)
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-	return (dst);
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
+	while (i < n)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (dest);
 }
+
+// int main()
+// {
+// 	char dest[] = "ahmet";
+// 	char src[] = "ah";
+// 	printf("%s", ft_memcpy(dest,src,4));
+// }
+//!!! dest[] * farkını gptye sor
+// int main()
+// {
+// 	// char dest[] = "ahmet";
+// 	char src[20] = "ahmet";
+// 	char *res = ft_memcpy(src + 2,src,5);
+// 	printf("%s",res);
+// }

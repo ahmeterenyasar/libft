@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:40:34 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 15:06:54 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/24 15:39:05 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,35 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*str;
 
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (s[i])
+	if (s)
 	{
-		if (i >= start && j < len)
+		if (start >= ft_strlen(s) || len == 0 || ft_strlen(s) == 0)
+			return (ft_strdup(""));
+		i = 0;
+		while (i < len && s[i + start])
+			i++;
+		str = (char *) malloc((sizeof(char) * i) + 1);
+		if (!(str))
+			return (NULL);
+		j = 0;
+		while (j < i)
 		{
-			str[j] = s[i];
+			str[j] = s[start + j];
 			j++;
 		}
-		i++;
+		str[j] = '\0';
+		return (str);
 	}
-	str[j] = 0;
-	return (str);
+	return (NULL);
 }
+
+// #include <string.h>
+// int main() {
+//     const char *s = "ramazan aktas";
+//     unsigned int start = 2;
+//     size_t len = 4;
+//     char *result;
+//     result = ft_substr(s, start, len);
+//     printf("Substring: %s\n", result);
+//     return 0;
+// }
