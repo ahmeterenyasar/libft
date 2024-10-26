@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:22:31 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/26 10:03:17 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:18:59 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	return (str);
 }
-
-// #include <string.h>
-// int main() {
-//     const char *s1 = "ahmet erena";
-//     const char *set = "ahm";
-//     char *result;
-//     result = ft_strtrim(s1, set);
-//     printf("Trimmed string: %s\n", result);
-//     free(result);
-//     return 0;
-// }

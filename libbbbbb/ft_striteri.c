@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:38:22 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/26 09:29:18 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:18:26 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		}
 	}
 }
-
-// void upper(unsigned int index, char *c) {
-//     *c = ft_toupper(*c);
-// }
-// int main() {
-//     char str[] = "hello, world!";
-//     ft_striteri(str, upper);
-//     printf("Result: %s\n", str); // Should print "HELLO, WORLD!"
-//     return 0;
-// }

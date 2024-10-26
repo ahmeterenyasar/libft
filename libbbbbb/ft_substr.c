@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:40:34 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 15:39:05 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:19:03 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (NULL);
 }
-
-// #include <string.h>
-// int main() {
-//     const char *s = "ramazan aktas";
-//     unsigned int start = 2;
-//     size_t len = 4;
-//     char *result;
-//     result = ft_substr(s, start, len);
-//     printf("Substring: %s\n", result);
-//     return 0;
-// }

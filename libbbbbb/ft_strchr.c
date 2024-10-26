@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 16:06:11 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 15:26:14 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:18:20 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// #include <string.h>
-// int main()
-// {
-// 	char arr[] = "ramaazan";
-// 	int c = 'm';
-// 	char *res = ft_strchr(arr, c);
-// 	char *res2 = strchr(arr, c);
-// 	printf("%s\n", res);
-// 	printf("%s\n", res2);
-// }

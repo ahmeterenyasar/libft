@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 10:30:49 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 14:21:03 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:18:02 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,3 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	}
 	return (s1);
 }
-
-// int main()
-// {
-// 	char dest[] = "beret";
-// 	char src[] = "ahm";
-// 	char *res = ft_memmove(dest,src,3);
-// 	printf("%s",res);
-// }

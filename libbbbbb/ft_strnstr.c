@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 14:06:22 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 14:19:28 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:18:54 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// int main()
-// {
-//     const char haystack[] = "This is a simple haystack";
-//     const char needle[] = "simple";
-//     size_t len = 20;
-//     char *result;
-
-//     // Test case 1: Found within length limit
-//     result = ft_strnstr(haystack, needle, len);
-//     printf("%s", result);
-//     return 0;
-// }

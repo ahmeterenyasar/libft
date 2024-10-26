@@ -6,7 +6,7 @@
 #    By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 16:01:26 by ayasar            #+#    #+#              #
-#    Updated: 2024/10/26 13:25:02 by ayasar           ###   ########.fr        #
+#    Updated: 2024/10/26 15:59:41 by ayasar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,8 @@ SRCS			=	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
       			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJS			= $(SRCS:.c=.o)
 
-BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
-				ft_lstlast.c ft_lstnew.c ft_lstsize.c
+BONUS			=	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
+				ft_lstdelone_bonus.c ft_lstlast_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
 BONUS_OBJS		= $(BONUS:.c=.o)
 
 CFLAGS			= -Wall -Wextra -Werror

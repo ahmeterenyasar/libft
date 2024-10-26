@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:48:39 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 14:49:22 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:15:57 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-// 	char *s1 = "aaaab";
-// 	char *s2 = "bbbba";
-// 	printf("%d", ft_memcmp(s1, s2, 4));
-// }
