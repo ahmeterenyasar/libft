@@ -6,7 +6,7 @@
 #    By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/16 16:01:26 by ayasar            #+#    #+#              #
-#    Updated: 2024/10/24 15:14:47 by ayasar           ###   ########.fr        #
+#    Updated: 2024/10/26 13:25:02 by ayasar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,17 +25,12 @@ BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 				ft_lstlast.c ft_lstnew.c ft_lstsize.c
 BONUS_OBJS		= $(BONUS:.c=.o)
 
-CC				= @cc
-RM				= @rm -f
 CFLAGS			= -Wall -Wextra -Werror
 
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
-
-$(OBJS) $(BONUS_OBJS): %.o: %.c
-				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 				@$(RM) $(OBJS) $(BONUS_OBJS)
@@ -45,7 +40,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-bonus:			$(OBJS) $(BONUS_OBJS)
+bonus:			$(BONUS_OBJS)
 				@ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:			all clean fclean re bonus

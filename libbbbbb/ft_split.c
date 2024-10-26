@@ -6,57 +6,80 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:23:16 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/21 15:40:25 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 10:22:27 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countwords(char const *str, char c)
+static unsigned int	ft_wordcount(const char *s, char c)
 {
-	int	count;
+	unsigned int	word;
+
+	word = 0;
+	while (*s)
+	{
+		if (*s == c)
+			s++;
+		else
+		{
+			while (*s != c && *s)
+				s++;
+			word++;
+		}
+	}
+	return (word);
+}
+
+static unsigned int	ft_index(const char *s, char c)
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+static char	**ft_free(char **result)
+{
 	int	i;
 
 	i = 0;
-	count = 0;
-	while (str[i])
+	while (result[i])
 	{
-		while (str[i] == c)
-			i++;
-		if (str[i] != c && str[i] != '\0')
-			count++;
-		while (str[i] != c && str[i] != '\0')
-			i++;
+		free(result[i]);
+		i++;
 	}
-	return (count);
+	free(result);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		k;
-	int		tab_index;
-	char	**tab;
+	char			**str;
+	unsigned int	j;
+	unsigned int	a;
 
-	if (!s)
+	str = (char **)malloc((ft_wordcount(s, c) + 1) * sizeof(char *));
+	if (!str)
 		return (NULL);
-	tab = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
-	if (!tab)
-		return (NULL);
-	i = 0;
-	tab_index = 0;
-	while (s[i])
+	a = -1;
+	while (*s)
 	{
-		while (s[i] == c)
-			i++;
-		k = i;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if (i > k)
-			tab[tab_index++] = ft_substr(s, k, i - k);
+		while (*s == c)
+			s++;
+		if (*s)
+		{
+			str[++a] = (char *)malloc((ft_index(s, c) + 1) * sizeof(char));
+			if (!str[a])
+				return (ft_free(str));
+			j = 0;
+			while (*s && *s != c)
+				str[a][j++] = *s++;
+			str[a][j] = '\0';
+		}
 	}
-	tab[tab_index] = NULL;
-	return (tab);
+	str[++a] = NULL;
+	return (str);
 }
-
-// DOUBLE free ekle

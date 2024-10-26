@@ -1,60 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 17:37:26 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/26 10:39:42 by ayasar           ###   ########.fr       */
+/*   Created: 2024/10/18 11:03:23 by ayasar            #+#    #+#             */
+/*   Updated: 2024/10/24 14:49:41 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static long	ft_len(long src)
+int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	t_list	*tmp;
+	int		i;
 
+	tmp = lst;
 	i = 0;
-	if (src < 0)
+	while (tmp)
 	{
-		src *= -1;
-		i++;
-	}
-	while (src > 0)
-	{
-		src /= 10;
+		tmp = tmp->next;
 		i++;
 	}
 	return (i);
-}
-
-char	*ft_itoa(int n)
-{
-	char	*ret;
-	int		i;
-	long	num;
-
-	if (n == 0)
-		return (ft_strdup("0"));
-	num = n;
-	i = ft_len(num);
-	ret = malloc(i + 1);
-	if (ret == NULL)
-		return (NULL);
-	if (n < 0)
-	{
-		num *= -1;
-		ret[0] = '-';
-	}
-	ret[i] = '\0';
-	i--;
-	while (i >= 0 && num > 0)
-	{
-		ret[i] = (num % 10) + '0';
-		num /= 10;
-		i--;
-	}
-	return (ret);
 }

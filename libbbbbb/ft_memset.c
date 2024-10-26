@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:31:49 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 14:48:34 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 09:38:29 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
 
 // #include <stdio.h>
 // int main()

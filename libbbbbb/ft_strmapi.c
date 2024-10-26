@@ -6,7 +6,7 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:36:23 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 14:17:56 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 11:47:29 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-
-// char function(unsigned int a, char c)
-// {
-//     return c - 32;
-// }
-// int main()
-// {
-//     char arr[] = "eren~";
-//     char *res = ft_strmapi(arr, function);
-//     printf("%s\n", res);
-//     free(res);
-//     return 0;
-// }

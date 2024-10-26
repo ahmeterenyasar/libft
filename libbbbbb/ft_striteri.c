@@ -6,11 +6,9 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:38:22 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/24 14:43:31 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/26 09:29:18 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
