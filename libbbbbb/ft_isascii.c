@@ -6,11 +6,9 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:30:43 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 11:54:08 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:50:27 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isascii(int c)
 {

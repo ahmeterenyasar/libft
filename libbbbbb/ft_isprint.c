@@ -6,11 +6,9 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:31:23 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/14 11:54:44 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:50:34 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isprint(int c)
 {

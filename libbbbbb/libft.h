@@ -6,16 +6,14 @@
 /*   By: ayasar <ayasar@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 11:27:30 by ayasar            #+#    #+#             */
-/*   Updated: 2024/10/26 14:37:47 by ayasar           ###   ########.fr       */
+/*   Updated: 2024/10/27 14:51:13 by ayasar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef struct s_list
 {
